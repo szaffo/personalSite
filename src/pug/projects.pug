@@ -1,0 +1,42 @@
+extends layout
+
+block title
+    +title("Projektek")
+
+block menu 
+ +menu("Projektek")
+
+block content
+    .ui.segment
+        .ui.items.divided.relaxed
+            .item
+                .content 
+                    a.header(target='_blank' href="https://diakkedvezmeny.com") Országos Diákkedvezmény Adatbázis
+                    .description
+                        p Diákkedvezményeket összegyűjtő oldal
+    
+            .item
+                .content
+                    a.header(target='_blank' href="https://github.com/szaffo/classroom") Oktatási rendszer
+                    .description
+                        p Laravelben készített oktatási rendszer szerveroldali webprogramozás tantárgy beadandó feladata
+
+            .item
+                .content
+                    a.header(target='_blank' href="https://github.com/szaffo/stratego-react") Stratego játék online
+                    .description
+                        p Kliensoldali webprogrmozás tantárgy beadandó feladata. A stratego nevű társasjáték
+                            | megvalósítása webes környezetben React segítségével.
+
+            .item
+                .content
+                    a.header(target='_blank' href="https://github.com/szaffo/wordCounter") WordCounter
+                    .description
+                        p Egy egyszerű Swing app Java-ban, ami a beírt szövegben számolja meg a sorokat, szavakat, karaktereket.
+
+            .item
+                .content
+                    a.header(target='_blank' href="https://szemetikrisztianphoto.com") Fotós portfólió és képmegosztó oldal
+                    .description
+                        p Portfólió oldal egy fotós számára, képmegosztó rendszerrel, melynek segítségével a kliensek
+                            | könnyen kiválaszthatják, hogy mely fotókat kérik megvásárolni.

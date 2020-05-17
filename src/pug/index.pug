@@ -1,30 +1,29 @@
-html(lang="hu")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Szabó Martin
-        link(rel="stylesheet", href="css/main.min.css")
-        link(href="https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap" rel="stylesheet")
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css")
-        link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
-    body
+extends layout
 
-        .stage-container
-            .stage.animated.fadeIn#stage-1
-                .left-side
-                    p.name.animated.fadeIn.faster Szabó Martin
-                    p.secondary.animated.fadeIn.faster Szoftverfejlesztő
+block title
+    +title("Főoldal")
 
-                .wrapper.animated.fadeInDown.delay-1s
-                    .down-wrapper.second
-                        .wrapper
-                            .down-container
-                                i.fa.fa-chevron-down
-                    .down-wrapper.animated.fadeInDown.delay-1s
-                        .wrapper
-                            .down-container
-                                i.fa.fa-chevron-down
-            .stage
-                p stage1
-            .stage
-                p stage2
+block content
+    .ui.segment
+        .ui.items
+            .item
+                .image 
+                    img(src="images/prof.jpg", alt="alt")
+                .content
+                    a.header(href="#") Szabó Martin
+                    .description
+                        p Eötvös Loránd Tudományegyetem Informatika karának hallgatója
+                    .meta
+                        i.github.icon
+                        a(target="_blank" href="https://github.com/szaffo") github.com/szaffo
+                    .meta
+                        i.envelope.icon
+                        span cqbo0i@inf.elte.hu
+                    .meta
+                        i.envelope.icon
+                        span szaffo@szabomartin.com
+                    .meta
+                        i.phone.icon
+                        span 06-20/269-22-99
+                    //- .extra  
+                        p additional
