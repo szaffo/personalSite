@@ -1,5 +1,5 @@
 mixin title($page)
-    title #{$page}
+    title Szabó Martin - #{$page}
 
 mixin menu(selected)
     - const menuData = [{"text": "Főoldal", "link": "index.html"},{"text": "Projektek", "link": "projects.html"}]
@@ -39,7 +39,7 @@ html(lang="hu")
     body
 
         .main-col
-            div(style="display:hidden;")
+            div(style="display:none;")
                 h1 Szabó Martin oldala
             .ui.secondary.pointing.menu
                 block menu
