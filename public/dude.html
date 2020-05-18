@@ -1,0 +1,74 @@
+
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Szabó Martin"/>
+    <meta name="description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.szabomartin.com/"/>
+    <meta property="og:title" content="Szabó Martin"/>
+    <meta property="og:image" content="https://www.szabomartin.com/images/prof.jpg"/>
+    <meta property="og:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta property="og:determiner" content=""/>
+    <meta property="og:site_name" content="Szabó Martin"/>
+    <meta property="og:site_name" content="Szabó Martin"/>
+    <meta name="twitter:title" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta name="twitter:image" content="https://www.szabomartin.com/images/prof.jpg"/>
+    <meta name="twitter:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.css"/>
+    <link rel="stylesheet" href="css/main.min.css" attr="attr"/>
+    <title>Szabó Martin - Dude projekt</title>
+  </head>
+  <body>
+    <div class="main-col">
+      <div style="display:none;">
+        <h1>Szabó Martin oldala</h1>
+      </div>
+      <div class="ui secondary pointing menu"><a class="item" href="index.html">Főoldal</a><a class="item active" href="projects.html">Projektek</a>
+        <div class="right menu"><a class="ui item" href="index.html">Kapcsolat</a></div>
+      </div>
+      <div class="ui segment"><a class="ui button icon" href="projects.html"><i class="left arrow icon"></i></a><a class="ui button on right floated" target="_blank" href="https://github.com/szaffo/dudeGame"> <i class="github icon"></i><span>Github</span></a>
+        <div class="ui segment floated basic">
+          <h1 class="ui header">Dude Java game 
+            <div class="ui label small"><i class="tag icon"></i><span>v0.1            </span></div>
+          </h1>
+          <p>Eredetileg a szoftvertechnológia tárgy részeként kezdtük hárman, projektmunkaként.<img class="ui image tiny left floated bordered" src="images/dude.png" alt="alt"/>Nem akartunk sok effortot beleölni. Ez részben sikerült is. Viszont a fejlesztés alatt 
+            annyirra megtetszett benne egy két eleme, hogy annak elenére is, hogy Java, tovább szeretném folytatni.
+            Van egy-két ötletem, amit szeretnék hozzáadni, illetve módosítani.
+          </p>
+        </div>
+        <div class="ui segment basic">
+          <h2 class="ui header dividing">A játék</h2>
+          <p>
+            Ez egy 2D-s platformer játék, kissé rage game. Lényege, hogy a játékossal - Dude - odamenj minden
+            bútorhoz a szobában, és azokat lootolva Neptun pipát keress.
+            
+          </p>
+          <p>
+            Na de mitől lesz rage game? Attól, hogy közben követ a Covid, buta robotok random mozgással lövöldöznek
+            össze vissza, nehéz a pálya, és a collision sem lett jól megírva, és ha meghalsz visszadob az első mapra.
+            A pályák közti közlekedést egy "időkapu" segíti. Ez lényegében átvisz egy másik pályára, de közben a többi
+            inaktív pályán nem tellik az idő. Így lehetséges, hogy egy enemy beleáll az időkapuba, és azt a pályát leheteten
+            újra megközelíteni.
+            
+          </p>
+        </div>
+        <div class="ui segment basic">
+          <h2 class="ui header dividing">Development</h2>
+          <p>
+            A feladat az volt, hogy másoljuk le a Mission Impossible játékot Java-ban, MVC architektórával.
+            Ráadásul Observer tervmintával. Ez kb sikerült is.
+            
+          </p>
+          <p>
+            Miután bemutattuk a játékot, átraktam egy saját GitHub repo-ba, és pár dolgot azonnal átalakítottam.
+            Eltünt az amúgy deprecated Observer tervminta, és egy kicsit optimalizáltam is.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+extends layout
+
+block title
+    +title("Dude projekt")
+
+block menu
+    +menu("Projektek")
+
+block content
+    .ui.segment
+        a.ui.button.icon(href="projects.html")
+            i.left.arrow.icon
+        
+        a.ui.button.on.right.floated(target='_blank' href="https://github.com/szaffo/dudeGame") 
+            i.github.icon
+            span Github
+
+        .ui.segment.floated.basic
+            h1.ui.header Dude Java game 
+                div.ui.label.small
+                    i.tag.icon
+                    span v0.1            
+
+            p
+                | Eredetileg a szoftvertechnológia tárgy részeként kezdtük hárman, projektmunkaként.
+                img.ui.image.tiny.left.floated.bordered(src="images/dude.png", alt="alt")
+                | Nem akartunk sok effortot beleölni. Ez részben sikerült is. Viszont a fejlesztés alatt 
+                | annyirra megtetszett benne egy két eleme, hogy annak elenére is, hogy Java, tovább szeretném folytatni.
+                | Van egy-két ötletem, amit szeretnék hozzáadni, illetve módosítani.
+
+        .ui.segment.basic
+            h2.ui.header.dividing A játék
+            
+            p.
+                Ez egy 2D-s platformer játék, kissé rage game. Lényege, hogy a játékossal - Dude - odamenj minden
+                bútorhoz a szobában, és azokat lootolva Neptun pipát keress.
+
+            p.
+                Na de mitől lesz rage game? Attól, hogy közben követ a Covid, buta robotok random mozgással lövöldöznek
+                össze vissza, nehéz a pálya, és a collision sem lett jól megírva, és ha meghalsz visszadob az első mapra.
+                A pályák közti közlekedést egy "időkapu" segíti. Ez lényegében átvisz egy másik pályára, de közben a többi
+                inaktív pályán nem tellik az idő. Így lehetséges, hogy egy enemy beleáll az időkapuba, és azt a pályát leheteten
+                újra megközelíteni.
+
+        .ui.segment.basic
+            h2.ui.header.dividing Development
+
+            p.
+                A feladat az volt, hogy másoljuk le a Mission Impossible játékot Java-ban, MVC architektórával.
+                Ráadásul Observer tervmintával. Ez kb sikerült is.
+
+            p.
+                Miután bemutattuk a játékot, átraktam egy saját GitHub repo-ba, és pár dolgot azonnal átalakítottam.
+                Eltünt az amúgy deprecated Observer tervminta, és egy kicsit optimalizáltam is.
+
+        
+        
