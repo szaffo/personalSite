@@ -2,7 +2,7 @@ mixin title($page)
     title Szabó Martin - #{$page}
 
 mixin menu(selected)
-    - const menuData = [{"text": "Főoldal", "link": "index.html"},{"text": "Projektek", "link": "projects.html"}]
+    - const menuData = [{"text": "Főoldal", "link": "index.html"},{"text": "Projektek", "link": "projects.html"}, {"text": "Linkek", "link": "links.html"}]
 
     each menu in menuData
         if selected == menu.text
