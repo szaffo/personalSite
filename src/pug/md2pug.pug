@@ -1,0 +1,18 @@
+extends layouts/mdLayout 
+block title 
+  +title("md2pug") 
+block menu 
+  +menu("Projektek") 
+block mdContent 
+  h1.ui.header Markdown to Pug CLI tool
+    a(href="https://www.npmjs.com/package/markdown-to-pug-cli")
+      +label("tag", "v1.1.2")
+    a(href="https://github.com/szaffo/markdown-to-pug-cli") 
+      +label("github", "Github")
+    a(href="https://www.npmjs.com/package/markdown-to-pug-cli") 
+      +label("npm", "npm")
+  p Ez az első node package-em. Létrejöttének oka, hogy szükségem volt egy eszközre, amivel gyorsan publikálhatok markdown fájlokat a honlapomra, aminek forráskódját Pug-ban írtam.
+  p 
+    | Maga a converter már létezett (
+    a(href="https://www.npmjs.com/package/markdown-to-pug") markdown-to-pug 
+    | ), én és egy barátom csak felhasználtuk azt, és egy CLI tool-t csináltunk, hogy könyebben lehessen fordítani a terminlból.

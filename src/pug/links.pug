@@ -1,4 +1,4 @@
-extends layout
+extends layouts/layout
 
 block title
     +title('Linkek')
@@ -17,7 +17,12 @@ block content
                     a.header(href="adatb.html") Adatb helper
                     .description 2020.05.25.
             .item
-                i.large.file.middle.aligned.icon
+                i.gamepad.middle.aligned.icon.large
                 .content
                     a.header(href="/stratego") Startego demo
                     .description 2020.05.25.
+            .item
+                i.npm.middle.aligned.icon.large
+                .content
+                    a.header(href="/stratego") Markdown to Pug CLI
+                    .description 2020.05.27.

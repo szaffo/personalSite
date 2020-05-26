@@ -10,6 +10,16 @@ mixin menu(selected)
         else
             a.item(href=menu.link) #{menu.text}
 
+mixin bread(page)
+    .ui.breadcrumb
+        a.section(href="/projects.html") Projektek
+        i.right.angle.icon.divider
+        div.section.active #{page}
+
+mixin label(icon, text)
+    div.ui.label.small
+        i.icon(class=`${icon}`)
+        span #{text}
 
 html(lang="hu")
     head

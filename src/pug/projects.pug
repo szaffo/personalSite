@@ -1,4 +1,4 @@
-extends layout
+extends layouts/layout
 
 block title
     +title("Projektek")
@@ -8,7 +8,13 @@ block menu
 
 block content
     .ui.segment
-        .ui.items.divided.relaxed
+        .ui.items.link.divided.relaxed   
+            .item
+                .content 
+                    a.header(href="/md2pug.html") Markdown to Pug npm package
+                    .description
+                        p Első node package-em
+
             .item
                 .content 
                     a.header(href="/dude.html") Dude Java játék
