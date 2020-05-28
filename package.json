@@ -1,0 +1,24 @@
+{
+  "name": "szaffo-site",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "main": "index.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "devDependencies": {
+    "markdown-to-pug-cli": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szaffo/personalSite.git"
+  },
+  "author": "Szabó Martin",
+  "bugs": {
+    "url": "https://github.com/szaffo/personalSite/issues"
+  },
+  "homepage": "https://github.com/szaffo/personalSite#readme"
+}

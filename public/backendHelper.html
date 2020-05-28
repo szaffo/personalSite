@@ -1,0 +1,130 @@
+
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Szabó Martin"/>
+    <meta name="description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.szabomartin.com/"/>
+    <meta property="og:title" content="Szabó Martin"/>
+    <meta property="og:image" content="https://www.szabomartin.com/images/prof.jpg"/>
+    <meta property="og:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta property="og:determiner" content=""/>
+    <meta property="og:site_name" content="Szabó Martin"/>
+    <meta property="og:site_name" content="Szabó Martin"/>
+    <meta name="twitter:title" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <meta name="twitter:image" content="https://www.szabomartin.com/images/prof.jpg"/>
+    <meta name="twitter:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.css"/>
+    <link rel="stylesheet" href="css/main.min.css" attr="attr"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/monokai.min.css"/>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad()</script>
+    <title>Szabó Martin - Backend helper</title>
+  </head>
+  <body>
+    <div class="main-col">
+      <div style="display:none;">
+        <h1>Szabó Martin oldala</h1>
+      </div>
+      <div class="ui secondary pointing menu"><a class="item" href="index.html">Főoldal</a><a class="item active" href="projects.html">Projektek</a><a class="item" href="links.html">Linkek</a>
+      </div>
+      <div class="ui segment">
+        <h1>Backend ZH helper</h1>
+        <ul>
+          <li><a href="#backend-zh-helper">Backend ZH helper</a>
+            <ul>
+              <li><a href="#linkek">Linkek</a></li>
+              <li><a href="#package-install-guide">Package install guide</a></li>
+              <li><a href="#guides">Guides</a>
+                <ul>
+                  <li><a href="#websocket-server">Websocket server</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Linkek</h2>
+        <ul>
+          <li><a href="https://docs.feathersjs.com/guides/">Feathers guide</a></li>
+          <li><a href="https://sequelize.org/v5/">Sequalize docs</a></li>
+          <li><a href="https://www.apollographql.com/docs/">Apollo server</a></li>
+          <li><a href="https://www.npmjs.com/package/axios">Axios docs</a></li>
+          <li><a href="https://socket.io/docs/">Socket IO docs</a></li>
+          <li><a href="https://socket.io/docs/emit-cheatsheet/">Socket IO emit cheet sheet</a></li>
+        </ul>
+        <h2>Package install guide</h2>
+        <pre class="hljs language-bash"><code># Sequalize
+$ npm install sequelize
+
+# Feathers
+$ npm install @feathersjs/feathers @feathersjs/cli 
+
+# sqlite3
+$ npm install sqlite3 
+
+# Apollo server*
+$ npm install apollo-server 
+
+# Axios
+$ npm install axios 
+
+# Nodemon
+$ npm install --save-dev nodemon 
+</code></pre>
+        <h2>Guides</h2>
+        <h3>Websocket server</h3>
+        <p><strong>server.js</strong></p>
+        <pre class="hljs language-js"><code>const app = require('http').createServer(handler)
+const io = require('socket.io')(app);
+const fs = require('fs');
+
+app.listen(8000);
+
+function handler(req, res) {
+    const fileName = (req.url.includes(".js")) ? (__dirname + '/client.js') : (__dirname + '/index.html');
+    console.log(fileName);
+    fs.readFile(fileName,
+        (err, data) => {
+            if (err) {
+                res.writeHead(500);
+                return res.end('Error loading index.html');
+            }
+
+            res.writeHead(200);
+            res.end(data);
+        });
+}
+
+io.on('connection',(socket) => {
+
+    console.log(`User with ${socket.id} has been connected.`);
+    socket.on('disconnect',(socket)=>{
+        console.log(`User with ${socket.id} has been disconnected.`);
+    });
+});
+</code></pre>
+        <p><strong>client.js</strong></p>
+        <pre class="hljs language-js"><code>const socket = io('http://localhost:8000');
+
+socket.on(...)
+</code></pre>
+        <p><strong>index.html</strong></p>
+        <pre class="hljs language-html"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CLIENT&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Client&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;/client.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+  </body>
+</html>
