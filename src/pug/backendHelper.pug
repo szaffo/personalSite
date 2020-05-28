@@ -1,8 +1,6 @@
 extends layouts/mdLayout.pug 
 block title 
   +title("Backend helper") 
-block menu 
-  +menu("Projektek") 
 block mdContent 
   h1 Backend ZH helper
   ul
@@ -18,6 +16,10 @@ block mdContent
           ul
             li
               a(href="#websocket-server") Websocket server
+            li
+              a(href="#apollo-server--graphql") Apollo server & GraphQL
+        li
+          a(href="#commands") Commands
   h2 Linkek
   ul
     li
@@ -111,3 +113,62 @@ block mdContent
           &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
           &lt;script src=&quot;/client.js&quot;&gt;&lt;/script&gt;
       &lt;/html&gt;
+      
+  h3 Apollo server & GraphQL
+  p
+    strong server.js
+  pre.hljs.language-js
+    code. 
+      const { ApolloServer , gql } = require('apollo-server');
+      // const models = require('./models'); // for Sequalize 
+      const axios = require('axios').default;
+      
+      // Example axios fetch
+      const getItems = async (pageCap = 10000, page = 1) => {
+          const response = await axios.get(`https://diakkedvezmeny.com/items?pageCapacity=${pageCap}&page=${page}`);
+          return response.data.result;
+      }
+      
+      const schema = gql`
+          type Query {
+              greeting(name: String): String
+          }
+      
+      `
+      
+      const resolvers = {
+          Query: {
+              greeting: (parent, {name}) => `Hello ${name}`,
+      
+          }
+      }
+      
+      
+      async function run() {
+          // await models.sequelize.sync(); // optional
+          const server = new ApolloServer({
+              typeDefs: schema,
+              resolvers
+      
+      // If you want db
+              // context: {
+              //     tracks: models.Track,
+              //     projects: models.Project,
+              //     users: models.User,
+              //     filters: models.Filter
+              // }
+          });
+          server.listen().then(r => console.log("OK Server is running"));
+      
+      }
+      run();
+      
+  h2 Commands
+  pre.hljs.language-bash
+    code. 
+      # Sequalize generate model
+      $ npx sequalize generate:model --name dogs --attributes name:string 
+      
+      # Feathers
+      $ npx feathers init
+      $ npx feathers generate service

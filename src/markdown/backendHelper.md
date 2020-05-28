@@ -3,9 +3,6 @@
 <!-- block title -->
 <!-- ++title("Backend helper") -->
 
-<!-- block menu -->
-<!-- ++menu("Projektek") -->
-
 <!-- block mdContent -->
 
 # Backend ZH helper
