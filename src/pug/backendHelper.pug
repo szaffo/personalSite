@@ -2,7 +2,7 @@ extends layouts/mdLayout.pug
 block title 
   +title("Backend helper") 
 block mdContent 
-  h1 Backend ZH helper
+  h1(id="backend-zh-helper") Backend ZH helper
   ul
     li
       a(href="#backend-zh-helper") Backend ZH helper
@@ -20,7 +20,7 @@ block mdContent
               a(href="#apollo-server--graphql") Apollo server & GraphQL
         li
           a(href="#commands") Commands
-  h2 Linkek
+  h2(id="linkek") Linkek
   ul
     li
       a(href="https://docs.feathersjs.com/guides/") Feathers guide
@@ -34,7 +34,7 @@ block mdContent
       a(href="https://socket.io/docs/") Socket IO docs
     li
       a(href="https://socket.io/docs/emit-cheatsheet/") Socket IO emit cheet sheet
-  h2 Package install guide
+  h2(id="package-install-guide") Package install guide
   pre.hljs.language-bash
     code. 
       # Sequalize
@@ -55,8 +55,8 @@ block mdContent
       # Nodemon
       $ npm install --save-dev nodemon 
       
-  h2 Guides
-  h3 Websocket server
+  h2(id="guides") Guides
+  h3(id="websocket-server") Websocket server
   p
     strong server.js
   pre.hljs.language-js
@@ -114,7 +114,7 @@ block mdContent
           &lt;script src=&quot;/client.js&quot;&gt;&lt;/script&gt;
       &lt;/html&gt;
       
-  h3 Apollo server & GraphQL
+  h3(id="apollo-server-%26-graphql") Apollo server & GraphQL
   p
     strong server.js
   pre.hljs.language-js
@@ -163,7 +163,7 @@ block mdContent
       }
       run();
       
-  h2 Commands
+  h2(id="commands") Commands
   pre.hljs.language-bash
     code. 
       # Sequalize generate model

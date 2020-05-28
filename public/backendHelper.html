@@ -31,7 +31,7 @@
       <div class="ui secondary pointing menu"><a class="item" href="index.html">Főoldal</a><a class="item" href="projects.html">Projektek</a><a class="item" href="links.html">Linkek</a>
       </div>
       <div class="ui segment">
-        <h1>Backend ZH helper</h1>
+        <h1 id="backend-zh-helper">Backend ZH helper</h1>
         <ul>
           <li><a href="#backend-zh-helper">Backend ZH helper</a>
             <ul>
@@ -47,7 +47,7 @@
             </ul>
           </li>
         </ul>
-        <h2>Linkek</h2>
+        <h2 id="linkek">Linkek</h2>
         <ul>
           <li><a href="https://docs.feathersjs.com/guides/">Feathers guide</a></li>
           <li><a href="https://sequelize.org/v5/">Sequalize docs</a></li>
@@ -56,7 +56,7 @@
           <li><a href="https://socket.io/docs/">Socket IO docs</a></li>
           <li><a href="https://socket.io/docs/emit-cheatsheet/">Socket IO emit cheet sheet</a></li>
         </ul>
-        <h2>Package install guide</h2>
+        <h2 id="package-install-guide">Package install guide</h2>
         <pre class="hljs language-bash"><code># Sequalize
 $ npm install sequelize
 
@@ -75,8 +75,8 @@ $ npm install axios
 # Nodemon
 $ npm install --save-dev nodemon 
 </code></pre>
-        <h2>Guides</h2>
-        <h3>Websocket server</h3>
+        <h2 id="guides">Guides</h2>
+        <h3 id="websocket-server">Websocket server</h3>
         <p><strong>server.js</strong></p>
         <pre class="hljs language-js"><code>const app = require('http').createServer(handler)
 const io = require('socket.io')(app);
@@ -125,7 +125,7 @@ socket.on(...)
     &lt;script src=&quot;/client.js&quot;&gt;&lt;/script&gt;
 &lt;/html&gt;
 </code></pre>
-        <h3>Apollo server & GraphQL</h3>
+        <h3 id="apollo-server-%26-graphql">Apollo server & GraphQL</h3>
         <p><strong>server.js</strong></p>
         <pre class="hljs language-js"><code>const { ApolloServer , gql } = require('apollo-server');
 // const models = require('./models'); // for Sequalize 
@@ -171,7 +171,7 @@ async function run() {
 }
 run();
 </code></pre>
-        <h2>Commands</h2>
+        <h2 id="commands">Commands</h2>
         <pre class="hljs language-bash"><code># Sequalize generate model
 $ npx sequalize generate:model --name dogs --attributes name:string 
 
