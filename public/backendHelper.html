@@ -43,7 +43,12 @@
                   <li><a href="#apollo-server--graphql">Apollo server & GraphQL</a></li>
                 </ul>
               </li>
-              <li><a href="#commands">Commands</a></li>
+              <li><a href="#commandss">Commandss</a></li>
+              <li><a href="#relationships">Relationships</a>
+                <ul>
+                  <li><a href="#sequalize">Sequalize</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -58,7 +63,7 @@
         </ul>
         <h2 id="package-install-guide">Package install guide</h2>
         <pre class="hljs language-bash"><code># Sequalize
-$ npm install sequelize
+$ npm install sequelize sequelize-cli
 
 # Feathers
 $ npm install @feathersjs/feathers @feathersjs/cli 
@@ -171,13 +176,33 @@ async function run() {
 }
 run();
 </code></pre>
-        <h2 id="commands">Commands</h2>
+        <h2 id="commandss">Commandss</h2>
         <pre class="hljs language-bash"><code># Sequalize generate model
 $ npx sequalize generate:model --name dogs --attributes name:string 
 
 # Feathers
 $ npx feathers init
-$ npx feathers generate service</code></pre>
+$ npx feathers generate service
+
+# Sequalize
+$ npx sequalize init
+$ npx sequalize model:generate
+$ npx sequelize migration:generate
+</code></pre>
+        <h2 id="relationships">Relationships</h2>
+        <h3 id="sequalize">Sequalize</h3>
+        <pre class="hljs language-js"><code>...
+// eslint-disable-next-line no-unused-vars
+  dogs.associate = function (models) {
+    // Define associations here
+    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    dogs.belongsTo(models.users); // <-- Belongs to ONE user
+    dogs.hasMany(models.puppy); // <-- 1 Dog can have many puppy
+    dogs.belongsToMany(models.toys, {through: 'dogs_toys'}); // <-- Many to Many a dogs_toys táblával
+  };
+
+  return dogs;
+...</code></pre>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

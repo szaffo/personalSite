@@ -13,7 +13,9 @@
   - [Guides](#guides)
     - [Websocket server](#websocket-server)
     - [Apollo server & GraphQL](#apollo-server--graphql)
-  - [Commands](#commands)
+  - [Commandss](#commandss)
+  - [Relationships](#relationships)
+    - [Sequalize](#sequalize)
 
 ## Linkek
 
@@ -29,7 +31,7 @@
 
 ```bash
 # Sequalize
-$ npm install sequelize
+$ npm install sequelize sequelize-cli
 
 # Feathers
 $ npm install @feathersjs/feathers @feathersjs/cli 
@@ -155,7 +157,7 @@ async function run() {
 run();
 ```
 
-## Commands
+## Commandss
 
 ```bash
 # Sequalize generate model
@@ -164,4 +166,27 @@ $ npx sequalize generate:model --name dogs --attributes name:string
 # Feathers
 $ npx feathers init
 $ npx feathers generate service
+
+# Sequalize
+$ npx sequalize init
+$ npx sequalize model:generate
+$ npx sequelize migration:generate
+```
+
+## Relationships
+
+### Sequalize
+```js
+...
+// eslint-disable-next-line no-unused-vars
+  dogs.associate = function (models) {
+    // Define associations here
+    // See http://docs.sequelizejs.com/en/latest/docs/associations/
+    dogs.belongsTo(models.users); // <-- Belongs to ONE user
+    dogs.hasMany(models.puppy); // <-- 1 Dog can have many puppy
+    dogs.belongsToMany(models.toys, {through: 'dogs_toys'}); // <-- Many to Many a dogs_toys táblával
+  };
+
+  return dogs;
+...
 ```
