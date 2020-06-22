@@ -7,7 +7,7 @@
     "babel-cli": "^6.26.0"
   },
   "devDependencies": {
-    "markdown-to-pug-cli": "^1.3.1"
+    "markdown-to-pug-cli": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
