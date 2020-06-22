@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>NFC Sitebuild</title>
+  <meta name="description" content="Sitebuild with Semantic-UI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="NFC Sitebuild">
+  <meta property="og:type" content="Sitebuild with Semantic-UI">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="ui grid centered stackable">
+    <header class="ui row relaxed">
+      <div class="ui column">
+        <a href="/" class="ui header">NFC Static sitebuild</a>
+      </div>
+    </header>
+
+    <main class="ui row">
+      <!-- <div class="ui three wide column"></div> -->
+      <div class="ui ten wide column">
+
+          <div class="ui segment left aligned">
+            <h1 class="ui header small">Login</h1>
+
+<!--            <a href="main.html">-->
+              <button id="google-login-btn" class="ui google  button">
+                <i class="google  icon"></i>
+                Google
+              </button>
+              <button id="facebook-login-btn" class="ui facebook  button">
+                <i class="facebook  icon"></i>
+                Facebook
+              </button>
+<!--            </a>-->
+
+
+          </div>
+
+      </div>
+      <!-- <div class="ui three wide column"></div> -->
+    </main>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDfe7yck95u4F7RmsqVw8zGbk8UIM4XiDk",
+      authDomain: "sticktunnel.firebaseapp.com",
+      databaseURL: "https://sticktunnel.firebaseio.com",
+      projectId: "sticktunnel",
+      storageBucket: "sticktunnel.appspot.com",
+      messagingSenderId: "220459105460",
+      appId: "1:220459105460:web:66237795dd4def2f9d6be1"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="js/auth.js"></script>
+</body>
+
+</html>

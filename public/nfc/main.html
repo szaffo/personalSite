@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>NFC Sitebuild</title>
+  <meta name="description" content="Sitebuild with Semantic-UI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="NFC Sitebuild">
+  <meta property="og:type" content="Sitebuild with Semantic-UI">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- Info Message ############################################################################################ -->
+
+<div class="ui message floating transition hidden" id="message-box">
+  <i class="close icon"></i>
+  <div class="header">Üzenet</div>
+  <p>This is a special notification which you can dismiss if you're bored with it.</p>
+</div>
+
+<!-- Edit modal ############################################################################################ -->
+
+<div class="ui edit modal">
+    <div class="header">Szerkesztés</div>
+    <div class="content">
+
+        <div class="ui form">
+            <div class="disabled field">
+                <label>UUID</label>
+                <input id="form-uuid" type="text" readonly>
+            </div>
+
+            <div class="disabled field">
+                <label>User ID</label>
+                <input id="form-userid" type="text" readonly>
+            </div>
+
+            <div class="field name">
+              <label>Név</label>
+              <input id="form-name" type="text">
+            </div>
+
+            <div class="ui error message">
+              <div class="header">Kötelező mező</div>
+              <p>Kérlek adj meg egy nevet, a link későbbi azonosításához!</p>
+            </div>
+
+            <div class="field">
+                <label>Link</label>
+                <input id="form-link" type="text" placeholder="https://example.com">
+            </div>
+
+            <div class="actions right-flex-box">
+                <button class="ui positive button">Mentés</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- New Sticker modal ############################################################################################ -->
+
+<div class="ui newSticker modal">
+    <div class="header">Új Link létrehozása</div>
+    <div class="content">
+
+        <div class="ui form">
+              <div class="field name">
+                <label>Név</label>
+                <input id="form-name-new" type="text" placeholder="Név">
+              </div>
+              
+              <div class="ui error message">
+                <div class="header">Kötelező mező</div>
+                <p>Kérlek adj meg egy nevet, a link későbbi azonosításához!</p>
+              </div>
+
+            <div class="field">
+                <label>Link</label>
+                <input id="form-link-new" type="text" placeholder="https://example.com">
+            </div>
+
+            <div class="actions right-flex-box">
+                <button class="ui positive button">Létrehozás</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden input for copy ############################################################################################ -->
+<input type="text" id="hidden-input" hidden style="visibility: hidden;">
+<!-- Templates ############################################################################################ -->
+
+  <template id="table-row">
+    <tr>
+      <td><a target="_blank" href="#">Sticker name</a></td>
+      
+      <td class="right aligned">
+        <button class="edit ui icon circular button positive basic">
+          <i class="ui edit icon"></i>
+        </button>
+        <button href="#" class=" copy ui icon circular button purple basic">
+          <i class="ui copy icon"></i>
+        </button>
+      </td>
+    </tr>
+  </template>
+
+  <template id="table">
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th colspan="2">Linkek</th>
+          <!-- <th></th> -->
+        </tr>
+
+      </thead>
+      <tbody id="table-body">
+    
+      </tbody>
+    </table>
+  </template>
+
+
+  <template id="name-holder-template">
+    <div class="ui comments">
+      <div class="comment">
+        <a class="avatar">
+          <img id="avatar-holder" src="/images/avatar/small/joe.jpg">
+        </a>
+        <div class="content">
+          <a class="author">Tom Lukic</a>
+         
+          <div class="actions">
+            <a id="logout-btn">
+              <i class="sign-out icon"></i>
+              Kilépés
+            </a>
+            <a id="new-sticker-btn">
+              <i class="linkify icon"></i>
+              Új link
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  
+  <!-- Visible Site content ############################################################################################ -->
+
+<div class="ui grid centered stackable">
+  <header class="ui row very relaxed basic segment ">
+    <div class="ui column">
+      <a href="/" class="ui header">NFC Static sitebuild</a>
+    </div>
+  </header>
+
+  <main class="ui row">
+    <!-- <div class="ui three wide column"></div> -->
+    <div class="ui ten wide column">
+
+      <div class="ui segment left aligned">
+        
+        <div class="name-holder">
+          <div class="ui placeholder">
+            <div class="image header">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div id="main-container">
+        <div class="ui segment very relaxed">
+          <div class="ui active inverted dimmer">
+            <div class="ui text loader">Betöltés</div>
+          </div>
+          <div class="ui placeholder">
+            <div class="header">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+    </div>
+    <!-- <div class="ui three wide column"></div> -->
+  </main>
+</div>
+
+
+<!-- Scripts ############################################################################################ -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDfe7yck95u4F7RmsqVw8zGbk8UIM4XiDk",
+    authDomain: "sticktunnel.firebaseapp.com",
+    databaseURL: "https://sticktunnel.firebaseio.com",
+    projectId: "sticktunnel",
+    storageBucket: "sticktunnel.appspot.com",
+    messagingSenderId: "220459105460",
+    appId: "1:220459105460:web:66237795dd4def2f9d6be1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="js/showInfo.js"></script>
+<script src="js/displays.js"></script>
+<script src="js/EditModal.js"></script>
+<script src="js/NewStickerModal.js"></script>
+<script src="js/requests.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>
