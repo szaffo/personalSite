@@ -1,68 +1,4 @@
-
-<html lang="hu">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="Szabó Martin"/>
-    <meta name="description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.szabomartin.com/"/>
-    <meta property="og:title" content="Szabó Martin"/>
-    <meta property="og:image" content="https://www.szabomartin.com/images/prof.jpg"/>
-    <meta property="og:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
-    <meta property="og:determiner" content=""/>
-    <meta property="og:site_name" content="Szabó Martin"/>
-    <meta property="og:site_name" content="Szabó Martin"/>
-    <meta name="twitter:title" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
-    <meta name="twitter:image" content="https://www.szabomartin.com/images/prof.jpg"/>
-    <meta name="twitter:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika karának hallgatója."/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.css"/>
-    <link rel="stylesheet" href="css/main.min.css" attr="attr"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/monokai.min.css"/>
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad()</script>
-    <title>Szabó Martin - Backend helper</title>
-  </head>
-  <body>
-    <div class="main-col">
-      <div style="display:none;">
-        <h1>Szabó Martin oldala</h1>
-      </div>
-      <div class="ui secondary pointing menu"><a class="item" href="index.html">Főoldal</a><a class="item" href="projects.html">Projektek</a><a class="item" href="links.html">Linkek</a>
-      </div>
-      <div class="ui segment">
-        <h1 id="backend-zh-helper">Backend ZH helper</h1>
-        <ul>
-          <li><a href="#backend-zh-helper">Backend ZH helper</a>
-            <ul>
-              <li><a href="#linkek">Linkek</a></li>
-              <li><a href="#package-install-guide">Package install guide</a></li>
-              <li><a href="#guides">Guides</a>
-                <ul>
-                  <li><a href="#websocket-server">Websocket server</a></li>
-                  <li><a href="#apollo-server--graphql">Apollo server & GraphQL</a></li>
-                </ul>
-              </li>
-              <li><a href="#commandss">Commandss</a></li>
-              <li><a href="#relationships">Relationships</a>
-                <ul>
-                  <li><a href="#sequalize">Sequalize</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <h2 id="linkek">Linkek</h2>
-        <ul>
-          <li><a href="https://docs.feathersjs.com/guides/">Feathers guide</a></li>
-          <li><a href="https://sequelize.org/v5/">Sequalize docs</a></li>
-          <li><a href="https://www.apollographql.com/docs/">Apollo server</a></li>
-          <li><a href="https://www.npmjs.com/package/axios">Axios docs</a></li>
-          <li><a href="https://socket.io/docs/">Socket IO docs</a></li>
-          <li><a href="https://socket.io/docs/emit-cheatsheet/">Socket IO emit cheet sheet</a></li>
-        </ul>
-        <h2 id="package-install-guide">Package install guide</h2>
-        <pre class="hljs language-bash"><code># Sequalize
+<html lang="hu"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="Szabó Martin"/><meta name="description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika Karának hallgatója."/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.szabomartin.com/"/><meta property="og:title" content="Szabó Martin"/><meta property="og:image" content="https://www.szabomartin.com/images/prof.jpg"/><meta property="og:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika Karának hallgatója."/><meta property="og:determiner" content=""/><meta property="og:site_name" content="Szabó Martin"/><meta property="og:site_name" content="Szabó Martin"/><meta name="twitter:title" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika Karának hallgatója."/><meta name="twitter:image" content="https://www.szabomartin.com/images/prof.jpg"/><meta name="twitter:description" content="Szabó Martin vagyok, az Eötvös Loránd Tudományegyetem Informatika Karának hallgatója."/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.css"/><link rel="stylesheet" href="css/main.min.css" attr="attr"/><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/styles/monokai.min.css"/><script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script><script>hljs.initHighlightingOnLoad()</script><title>Szabó Martin - Backend helper</title></head><body><div class="main-col"><div style="display:none;"><h1>Szabó Martin oldala</h1></div><div class="ui secondary pointing menu"><a class="item" href="index.html">Főoldal</a><a class="item" href="projects.html">Projektek</a><a class="item" href="links.html">Linkek</a><a class="item" href="cv.html">Önéletrajz</a></div><div class="ui segment"><h1 id="backend-zh-helper">Backend ZH helper</h1><ul><li><a href="#backend-zh-helper">Backend ZH helper</a><ul><li><a href="#linkek">Linkek</a></li><li><a href="#package-install-guide">Package install guide</a></li><li><a href="#guides">Guides</a><ul><li><a href="#websocket-server">Websocket server</a></li><li><a href="#apollo-server--graphql">Apollo server & GraphQL</a></li></ul></li><li><a href="#commandss">Commandss</a></li><li><a href="#relationships">Relationships</a><ul><li><a href="#sequalize">Sequalize</a></li></ul></li></ul></li></ul><h2 id="linkek">Linkek</h2><ul><li><a href="https://docs.feathersjs.com/guides/">Feathers guide</a></li><li><a href="https://sequelize.org/v5/">Sequalize docs</a></li><li><a href="https://www.apollographql.com/docs/">Apollo server</a></li><li><a href="https://www.npmjs.com/package/axios">Axios docs</a></li><li><a href="https://socket.io/docs/">Socket IO docs</a></li><li><a href="https://socket.io/docs/emit-cheatsheet/">Socket IO emit cheet sheet</a></li></ul><h2 id="package-install-guide">Package install guide</h2><pre class="hljs language-bash"><code># Sequalize
 $ npm install sequelize sequelize-cli
 
 # Feathers
@@ -79,11 +15,7 @@ $ npm install axios
 
 # Nodemon
 $ npm install --save-dev nodemon 
-</code></pre>
-        <h2 id="guides">Guides</h2>
-        <h3 id="websocket-server">Websocket server</h3>
-        <p><strong>server.js</strong></p>
-        <pre class="hljs language-js"><code>const app = require('http').createServer(handler)
+</code></pre><h2 id="guides">Guides</h2><h3 id="websocket-server">Websocket server</h3><p><strong>server.js</strong></p><pre class="hljs language-js"><code>const app = require('http').createServer(handler)
 const io = require('socket.io')(app);
 const fs = require('fs');
 
@@ -111,14 +43,10 @@ io.on('connection',(socket) => {
         console.log(`User with ${socket.id} has been disconnected.`);
     });
 });
-</code></pre>
-        <p><strong>client.js</strong></p>
-        <pre class="hljs language-js"><code>const socket = io('http://localhost:8000');
+</code></pre><p><strong>client.js</strong></p><pre class="hljs language-js"><code>const socket = io('http://localhost:8000');
 
 socket.on(...)
-</code></pre>
-        <p><strong>index.html</strong></p>
-        <pre class="hljs language-html"><code>&lt;html&gt;
+</code></pre><p><strong>index.html</strong></p><pre class="hljs language-html"><code>&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;CLIENT&lt;/title&gt;
     &lt;/head&gt;
@@ -129,10 +57,7 @@ socket.on(...)
     &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;/client.js&quot;&gt;&lt;/script&gt;
 &lt;/html&gt;
-</code></pre>
-        <h3 id="apollo-server-%26-graphql">Apollo server & GraphQL</h3>
-        <p><strong>server.js</strong></p>
-        <pre class="hljs language-js"><code>const { ApolloServer , gql } = require('apollo-server');
+</code></pre><h3 id="apollo-server-%26-graphql">Apollo server & GraphQL</h3><p><strong>server.js</strong></p><pre class="hljs language-js"><code>const { ApolloServer , gql } = require('apollo-server');
 // const models = require('./models'); // for Sequalize 
 const axios = require('axios').default;
 
@@ -175,9 +100,7 @@ async function run() {
 
 }
 run();
-</code></pre>
-        <h2 id="commandss">Commandss</h2>
-        <pre class="hljs language-bash"><code># Sequalize generate model
+</code></pre><h2 id="commandss">Commandss</h2><pre class="hljs language-bash"><code># Sequalize generate model
 $ npx sequalize generate:model --name dogs --attributes name:string 
 
 # Feathers
@@ -188,10 +111,7 @@ $ npx feathers generate service
 $ npx sequalize init
 $ npx sequalize model:generate
 $ npx sequelize migration:generate
-</code></pre>
-        <h2 id="relationships">Relationships</h2>
-        <h3 id="sequalize">Sequalize</h3>
-        <pre class="hljs language-js"><code>...
+</code></pre><h2 id="relationships">Relationships</h2><h3 id="sequalize">Sequalize</h3><pre class="hljs language-js"><code>...
 // eslint-disable-next-line no-unused-vars
   dogs.associate = function (models) {
     // Define associations here
@@ -202,10 +122,4 @@ $ npx sequelize migration:generate
   };
 
   return dogs;
-...</code></pre>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
-  </body>
-</html>
+...</code></pre></div></div><script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script></body></html>

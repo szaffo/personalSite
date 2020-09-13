@@ -1,19 +1,23 @@
 extends layouts/layout
 
 block title
-    +title("Főoldal")
+    +title("Önéletrajz")
 
 
 block menu
-    +menu("Főoldal")
+    +menu("Önéletrajz")
 
 block content
     .ui.segment
         .ui.items
-            .item
-                .image 
-                    img(src="images/prof.jpg", alt="")
-                .content
+            //- .item
+            p: a(href="cv.pdf") Önéletrajz letöltése
+            p: a(href="cv_kepes.pdf") Képes önéletrajz letöltése
+            
+            h1 Önéletrajz
+            .image.small.ui.rounded 
+                img(src="images/prof.jpg", alt="")
+                //- .content
                     a.header(href="#") Szabó Martin
                     .description
                         p Az Eötvös Loránd Tudományegyetem Informatika karának hallgatója vagyok, programtervező informatikus szakon.
