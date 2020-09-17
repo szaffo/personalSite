@@ -9,32 +9,75 @@ block menu
 
 block content
     .ui.segment
-        .ui.items
-            //- .item
-            p: a(href="cv.pdf") Önéletrajz letöltése
-            p: a(href="cv_kepes.pdf") Képes önéletrajz letöltése
-            
-            h1 Önéletrajz
-            .image.small.ui.rounded 
-                img(src="images/prof.jpg", alt="")
-                //- .content
-                    a.header(href="#") Szabó Martin
-                    .description
-                        p Az Eötvös Loránd Tudományegyetem Informatika karának hallgatója vagyok, programtervező informatikus szakon.
-                    .meta
-                        i.github.icon
-                        a(target="_blank" href="https://github.com/szaffo") github.com/szaffo
-                    .meta
-                        i.envelope.icon
-                        span martin77szabo@gmail.com
-                    .meta
-                        i.envelope.icon
-                        span cqbo0i@inf.elte.hu
-                    .meta
-                        i.envelope.icon
-                        span szaffo@szabomartin.com
-                    .meta
-                        i.phone.icon
-                        span 06-20/269-22-99
-                    //- .extra  
-                        p additional
+        p: a(download="cv.pdf" href="https://firebasestorage.googleapis.com/v0/b/szaffo77.appspot.com/o/cv.pdf?alt=media&token=f9c5a9c0-4af5-4a2e-af5a-96c65690950b") Önéletrajz letöltése pdf formátumban
+
+        h1.ui.header(href="#") Szabó Martin
+        
+        img.ui.right.floated.small.rounded.image(src="images/prof.jpg" alt="")
+        
+        p 
+            b Születési hely, idő: &nbsp;
+            span Sátoraljaújhely, 1999.01.25.
+        
+        p 
+            b Állandó lakcím: &nbsp;
+            span 3950 Sárospatak, Bessenyei György utca 9.
+        
+        p 
+            b Tartózkodási hely: &nbsp;
+            span 1081 Budapest, Kiss József utca 11.
+        
+        p 
+            //- b Elérhetőség: &nbsp;
+            i.phone.icon
+            span &nbsp; +36 20 269 2299
+        
+        p
+            i.envelope.icon
+            span &nbsp; szaffo@szabomartin.com
+        
+        p
+            i.envelope.icon
+            span &nbsp; martin77szabo@gmail.com
+
+
+        h2 Szakmai tapasztalatok
+        
+        .ui.bulleted.list
+            .item Python, Java, C, C++
+            .item Frontend (HTML, CSS3, SASS, Pug, JS, React+Redux, Semantic UI)
+            .item Backend (PHP, Laravel, Flash)
+            .item Firebase (hosting, autentikáció, nosql adatbázis, analytics, storage)
+            .item SQL, PL/SQL
+            .item Verziókezelők használata (git)
+            .item Haladó Linux felhasználó
+
+        h2 Iskolai tanulmányok
+
+        .ui.bulleted.list
+            .item 
+                b 2018-(Diplomaszerzés várható ideje: 2021) 
+                .list 
+                    .item Eötvös Loránd Tudományegyetem	Informatikai Kar Programtervező informatikus szak Programtervező szakirány
+
+            .item
+                b 2014-2018.
+                .list
+                    .item Sárospataki Árpád Vezér Gimnázium és Kollégium, Sárospatak Emelt angol-informatika tagozat Érettségi 2018-ban
+
+        h2 Nyelvtudás
+
+        p
+            span Angol felsőfokú (C1) komplex nyelvvizsga
+            br
+            span Sorszáma: 1938122 
+            br
+            span 2018. március 8. ELTE Origó Nyelvi Centrum Kft. 1082 Budapest, Baross u. 62.
+
+
+
+        h2 Készségek
+        .ui.list.bulleted
+            .item Logikus gondolkodás
+            .item Csapatmunkára való alkalmasság
+            .item Komplex problémamegoldó képesség	 
