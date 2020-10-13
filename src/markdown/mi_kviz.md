@@ -47,6 +47,19 @@
     - [10. Melyek az alábbiak közül a visszalépéses keresés előnyei? (3)](#10-melyek-az-alábbiak-közül-a-visszalépéses-keresés-előnyei-3)
     - [11. Mely állítások NEM igazak az alábbiak közül? (2)](#11-mely-állítások-nem-igazak-az-alábbiak-közül-2)
     - [12. Képzelje maga elé a Hanoi tornyai probléma állapotgráfját három korong esetén. A startcsúcsból kivezető utak közül hányat vizsgál meg a visszalépéses keresés második változata, ha a mélységi korlát 3?](#12-képzelje-maga-elé-a-hanoi-tornyai-probléma-állapotgráfját-három-korong-esetén-a-startcsúcsból-kivezető-utak-közül-hányat-vizsgál-meg-a-visszalépéses-keresés-második-változata-ha-a-mélységi-korlát-3)
+  - [5](#5)
+    - [1. Mit tartalmaz a gráfkeresés globális munkaterülete?](#1-mit-tartalmaz-a-gráfkeresés-globális-munkaterülete)
+    - [2. Melyek a gráfkeresés keresési szabályai?](#2-melyek-a-gráfkeresés-keresési-szabályai)
+    - [3. Mi a gráfkeresés általános vezérlési stratégiája?](#3-mi-a-gráfkeresés-általános-vezérlési-stratégiája)
+    - [4. Mely csúcsokat nevezzük a gráfkereséseknél nyílt csúcsoknak?](#4-mely-csúcsokat-nevezzük-a-gráfkereséseknél-nyílt-csúcsoknak)
+    - [5. Mit mutat a gráfkereséseknél a szülőre visszamutató pointerfüggvény (𝜋)?](#5-mit-mutat-a-gráfkereséseknél-a-szülőre-visszamutató-pointerfüggvény-𝜋)
+    - [6. Mit mutat a gráfkereséseknél a költségfüggvény (g)?](#6-mit-mutat-a-gráfkereséseknél-a-költségfüggvény-g)
+    - [7. Mikor nevezünk egy kiértékelő függvényt csökkenőnek?](#7-mikor-nevezünk-egy-kiértékelő-függvényt-csökkenőnek)
+    - [8. Hogyan lehet a keresőgráf korrektségét fenn tartani? (2)](#8-hogyan-lehet-a-keresőgráf-korrektségét-fenn-tartani-2)
+    - [9. Mikor mondjuk a keresőgráf egyik csúcsára, hogy korrekt? (2)](#9-mikor-mondjuk-a-keresőgráf-egyik-csúcsára-hogy-korrekt-2)
+    - [10. Mely állítások igazak az alábbiak közül a gráfkeresés általános algoritmusára? (3)](#10-mely-állítások-igazak-az-alábbiak-közül-a-gráfkeresés-általános-algoritmusára-3)
+    - [11. Mely állítások NEM igazak az alábbiak közül a gráfkeresés általános algoritmusára? (2)](#11-mely-állítások-nem-igazak-az-alábbiak-közül-a-gráfkeresés-általános-algoritmusára-2)
+    - [12](#12)
 
 ## 2
 
@@ -320,3 +333,90 @@
 * X 8
 * **Y** *15*
 
+## 5
+
+### 1. Mit tartalmaz a gráfkeresés globális munkaterülete?
+
+* **Y** *A startcsúcsból kiinduló eddig felfedezett összes utat a nyílt csúcsokkal együtt.*
+* A reprezentációs gráfot, de külön megcímkézve benne a már bejárt csúcsokat.
+* A reprezentációs gráf egy tetszőleges részgráfját. 
+* Csak a nyílt csúcsok halmazát. 
+
+### 2. Melyek a gráfkeresés keresési szabályai?
+* **Y** *A nyílt csúcsok kiterjesztései.* 
+* Egy újabb él hozzávétele a kereső gráf egyik csúcsához. 
+* A továbblépés (újabb él felfedezése) és a visszalépés. 
+* A továbblépés (egy csúcsból kivezető összes él felfedezése) és a visszalépés.
+
+### 3. Mi a gráfkeresés általános vezérlési stratégiája?
+
+* **Y** *Minden lépésben a legígéretesebb nyílt csúcsot választja kiterjesztésre.*
+* A legutoljára felfedezett nyílt csúcs kiterjesztése. 
+* A startcsúcsból legkisebb költségű úton elérhető nyílt csúcs kiterjesztése.
+* A startcsúcsból legkisebb költségű már felfedezett úton elérhető nyílt csúcs kiterjesztése.
+
+
+### 4. Mely csúcsokat nevezzük a gráfkereséseknél nyílt csúcsoknak?
+* **Y** *A keresőgráf azon csúcsait, amelyek gyermekeit még nem, vagy nem eléggé jól ismerjük, ennél fogva kiterjesztésre várnak.*
+* A keresőgráf azon csúcsait, amelyekből kivezető éleket még nem fedeztük fel. 
+* A keresőgráf azon csúcsait, amelyeket még nem terjesztettünk ki.
+* A reprezentációs gráf azon csúcsait, amelyeket még nem terjesztettünk ki. 
+
+
+
+### 5. Mit mutat a gráfkereséseknél a szülőre visszamutató pointerfüggvény (𝜋)?
+
+* **Y** *A keresőgráfbeli csúcsok egyik szülőjét.*
+* A reprezentációs gráfbeli csúcsok legjobb szülőjét. 
+* A keresőgráfbeli csúcsok legjobb szülőjét. 
+* A reprezentációs gráfbeli csúcsok egyik szülőjét. 
+
+
+### 6. Mit mutat a gráfkereséseknél a költségfüggvény (g)?
+* **Y** *A startcsúcsból a keresőgráfbeli csúcsokhoz, a keresőgráfban vezető egyik út költségét.*
+* A startcsúcsból a keresőgráfbeli csúcsokhoz vezető egyik út költségét. 
+* A startcsúcsból a keresőgráfbeli csúcsokhoz, a keresőgráfban vezető legolcsóbb út költségét.
+* A startcsúcsból a keresőgráfbeli csúcsokhoz a szülőre visszamutató pointerfüggvény által kijelölt út költségét.
+
+
+### 7. Mikor nevezünk egy kiértékelő függvényt csökkenőnek?
+
+* **Y** *Ha egy csúcs függvényértéke soha nem nő, viszont mindig csökken valahányszor olcsóbb odavezető utat találunk hozzá.*
+* Ha egy csúcs értéke csak akkor változik, de akkor csökken, ha egy olcsóbb odavezető utat találunk hozzá.
+* Ha egy startcsúcsból kiinduló már felfedezett út mentén a csúcsok függvényértékei monoton csökkennek.
+* Ha az algoritmus által kiterjesztett csúcsok függvényértékei monoton csökkennek.
+
+
+### 8. Hogyan lehet a keresőgráf korrektségét fenn tartani? (2)
+* **Y** *Minden kiterjesztés után bejárjuk a kiterjesztéssel elért gyerekcsúcsok leszármazottait (ha vannak), és kijavítjuk azok korrektségét.*
+* **Y** *Olyan kiértékelő függvényt használunk, amely kizárja, hogy egy már korábban kiterjesztett csúcshoz minden addiginál olcsóbb odavezető utat találjunk a startcsúcsból.* 
+* Visszahelyezzük az OPEN halmazba azt a zárt csúcsot, amelyhez minden addiginél olcsóbb odavezető utat találtunk a startcsúcsból.
+* Amikor egy minden addiginél olcsóbb odavezető utat találunk egy csúcshoz, akkor módosítjuk a szülőre visszamutató pointerfüggvény értékét és a költségfüggvény értékét. 
+
+### 9. Mikor mondjuk a keresőgráf egyik csúcsára, hogy korrekt? (2)
+
+* **Y** *Ha a szülőre visszamutató pointerek a keresőgráfra nézve optimális utat jelölnek ki hozzá a startcsúcsból, és ennek az útnak a költségét mutatja a költségfüggvény.*
+* **Y** *Ha optimális és konzisztens.*
+* Ha a gráfkeresés már kiterjesztette a gyerekeit is.
+* Ha a költségfüggvény értéke a visszamutató pointerfüggvény által kijelölt szülő csúcsánál mért költségfüggvény értékének, és a szülőtől hozzávezető él költségének összege. 
+
+
+### 10. Mely állítások igazak az alábbiak közül a gráfkeresés általános algoritmusára? (3)
+* **Y** *Véges 𝛿-gráfban mindig terminál.*
+* **Y** *Egy csúcsot legfeljebb véges sokszor terjeszt ki még végtelen nagy 𝛿-gráfok esetén is.*
+* **Y** *Véges 𝛿-gráfban talál megoldást, ha van.*
+* Véges 𝛿-gráfban optimális megoldást talál, ha van megoldás. 
+
+### 11. Mely állítások NEM igazak az alábbiak közül a gráfkeresés általános algoritmusára? (2)
+
+* **Y** *Körmentes 𝛿-gráfban talál megoldást, ha van.*
+* **Y** *𝛿-gráfban mindig terminál.*
+* Csökkenő kiértékelő függvényt használva soha nem terjeszt ki inkorrekt csúcsot.
+* Véges 𝛿-gráfban talál megoldást, ha van. 
+
+
+### 12 
+* globális munkaterület - keresőgráf
+* keresési szabály - kiterjesztés
+* pointerfüggvény - szülőcsúcs
+* csökkenő kiértékelő függvény - korrektség

@@ -84,6 +84,22 @@
                   <li><a href="#12-k%C3%A9pzelje-maga-el%C3%A9-a-hanoi-tornyai-probl%C3%A9ma-%C3%A1llapotgr%C3%A1fj%C3%A1t-h%C3%A1rom-korong-eset%C3%A9n-a-startcs%C3%BAcsb%C3%B3l-kivezet%C5%91-utak-k%C3%B6z%C3%BCl-h%C3%A1nyat-vizsg%C3%A1l-meg-a-visszal%C3%A9p%C3%A9ses-keres%C3%A9s-m%C3%A1sodik-v%C3%A1ltozata-ha-a-m%C3%A9lys%C3%A9gi-korl%C3%A1t-3">12. Képzelje maga elé a Hanoi tornyai probléma állapotgráfját három korong esetén. A startcsúcsból kivezető utak közül hányat vizsgál meg a visszalépéses keresés második változata, ha a mélységi korlát 3?</a></li>
                 </ul>
               </li>
+              <li><a href="#5">5</a>
+                <ul>
+                  <li><a href="#1-mit-tartalmaz-a-gr%C3%A1fkeres%C3%A9s-glob%C3%A1lis-munkater%C3%BClete">1. Mit tartalmaz a gráfkeresés globális munkaterülete?</a></li>
+                  <li><a href="#2-melyek-a-gr%C3%A1fkeres%C3%A9s-keres%C3%A9si-szab%C3%A1lyai">2. Melyek a gráfkeresés keresési szabályai?</a></li>
+                  <li><a href="#3-mi-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-vez%C3%A9rl%C3%A9si-strat%C3%A9gi%C3%A1ja">3. Mi a gráfkeresés általános vezérlési stratégiája?</a></li>
+                  <li><a href="#4-mely-cs%C3%BAcsokat-nevezz%C3%BCk-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-ny%C3%ADlt-cs%C3%BAcsoknak">4. Mely csúcsokat nevezzük a gráfkereséseknél nyílt csúcsoknak?</a></li>
+                  <li><a href="#5-mit-mutat-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-a-sz%C3%BCl%C5%91re-visszamutat%C3%B3-pointerf%C3%BCggv%C3%A9ny-%F0%9D%9C%8B">5. Mit mutat a gráfkereséseknél a szülőre visszamutató pointerfüggvény (𝜋)?</a></li>
+                  <li><a href="#6-mit-mutat-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-a-k%C3%B6lts%C3%A9gf%C3%BCggv%C3%A9ny-g">6. Mit mutat a gráfkereséseknél a költségfüggvény (g)?</a></li>
+                  <li><a href="#7-mikor-nevez%C3%BCnk-egy-ki%C3%A9rt%C3%A9kel%C5%91-f%C3%BCggv%C3%A9nyt-cs%C3%B6kken%C5%91nek">7. Mikor nevezünk egy kiértékelő függvényt csökkenőnek?</a></li>
+                  <li><a href="#8-hogyan-lehet-a-keres%C5%91gr%C3%A1f-korrekts%C3%A9g%C3%A9t-fenn-tartani-2">8. Hogyan lehet a keresőgráf korrektségét fenn tartani? (2)</a></li>
+                  <li><a href="#9-mikor-mondjuk-a-keres%C5%91gr%C3%A1f-egyik-cs%C3%BAcs%C3%A1ra-hogy-korrekt-2">9. Mikor mondjuk a keresőgráf egyik csúcsára, hogy korrekt? (2)</a></li>
+                  <li><a href="#10-mely-%C3%A1ll%C3%ADt%C3%A1sok-igazak-az-al%C3%A1bbiak-k%C3%B6z%C3%BCl-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-algoritmus%C3%A1ra-3">10. Mely állítások igazak az alábbiak közül a gráfkeresés általános algoritmusára? (3)</a></li>
+                  <li><a href="#11-mely-%C3%A1ll%C3%ADt%C3%A1sok-nem-igazak-az-al%C3%A1bbiak-k%C3%B6z%C3%BCl-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-algoritmus%C3%A1ra-2">11. Mely állítások NEM igazak az alábbiak közül a gráfkeresés általános algoritmusára? (2)</a></li>
+                  <li><a href="#12">12</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -341,6 +357,91 @@
           <li>X 9</li>
           <li>X 8</li>
           <li><strong>Y  </strong><em>15</em></li>
+        </ul>
+        <h2 id="5">5</h2>
+        <h3 id="1.-mit-tartalmaz-a-gr%C3%A1fkeres%C3%A9s-glob%C3%A1lis-munkater%C3%BClete%3F">1. Mit tartalmaz a gráfkeresés globális munkaterülete?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>A startcsúcsból kiinduló eddig felfedezett összes utat a nyílt csúcsokkal együtt.</em></li>
+          <li>A reprezentációs gráfot, de külön megcímkézve benne a már bejárt csúcsokat.</li>
+          <li>A reprezentációs gráf egy tetszőleges részgráfját.</li>
+          <li>Csak a nyílt csúcsok halmazát.</li>
+        </ul>
+        <h3 id="2.-melyek-a-gr%C3%A1fkeres%C3%A9s-keres%C3%A9si-szab%C3%A1lyai%3F">2. Melyek a gráfkeresés keresési szabályai?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>A nyílt csúcsok kiterjesztései.</em></li>
+          <li>Egy újabb él hozzávétele a kereső gráf egyik csúcsához.</li>
+          <li>A továbblépés (újabb él felfedezése) és a visszalépés.</li>
+          <li>A továbblépés (egy csúcsból kivezető összes él felfedezése) és a visszalépés.</li>
+        </ul>
+        <h3 id="3.-mi-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-vez%C3%A9rl%C3%A9si-strat%C3%A9gi%C3%A1ja%3F">3. Mi a gráfkeresés általános vezérlési stratégiája?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Minden lépésben a legígéretesebb nyílt csúcsot választja kiterjesztésre.</em></li>
+          <li>A legutoljára felfedezett nyílt csúcs kiterjesztése.</li>
+          <li>A startcsúcsból legkisebb költségű úton elérhető nyílt csúcs kiterjesztése.</li>
+          <li>A startcsúcsból legkisebb költségű már felfedezett úton elérhető nyílt csúcs kiterjesztése.</li>
+        </ul>
+        <h3 id="4.-mely-cs%C3%BAcsokat-nevezz%C3%BCk-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-ny%C3%ADlt-cs%C3%BAcsoknak%3F">4. Mely csúcsokat nevezzük a gráfkereséseknél nyílt csúcsoknak?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>A keresőgráf azon csúcsait, amelyek gyermekeit még nem, vagy nem eléggé jól ismerjük, ennél fogva kiterjesztésre várnak.</em></li>
+          <li>A keresőgráf azon csúcsait, amelyekből kivezető éleket még nem fedeztük fel.</li>
+          <li>A keresőgráf azon csúcsait, amelyeket még nem terjesztettünk ki.</li>
+          <li>A reprezentációs gráf azon csúcsait, amelyeket még nem terjesztettünk ki.</li>
+        </ul>
+        <h3 id="5.-mit-mutat-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-a-sz%C3%BCl%C5%91re-visszamutat%C3%B3-pointerf%C3%BCggv%C3%A9ny-(%F0%9D%9C%8B)%3F">5. Mit mutat a gráfkereséseknél a szülőre visszamutató pointerfüggvény (𝜋)?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>A keresőgráfbeli csúcsok egyik szülőjét.</em></li>
+          <li>A reprezentációs gráfbeli csúcsok legjobb szülőjét.</li>
+          <li>A keresőgráfbeli csúcsok legjobb szülőjét.</li>
+          <li>A reprezentációs gráfbeli csúcsok egyik szülőjét.</li>
+        </ul>
+        <h3 id="6.-mit-mutat-a-gr%C3%A1fkeres%C3%A9sekn%C3%A9l-a-k%C3%B6lts%C3%A9gf%C3%BCggv%C3%A9ny-(g)%3F">6. Mit mutat a gráfkereséseknél a költségfüggvény (g)?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>A startcsúcsból a keresőgráfbeli csúcsokhoz, a keresőgráfban vezető egyik út költségét.</em></li>
+          <li>A startcsúcsból a keresőgráfbeli csúcsokhoz vezető egyik út költségét.</li>
+          <li>A startcsúcsból a keresőgráfbeli csúcsokhoz, a keresőgráfban vezető legolcsóbb út költségét.</li>
+          <li>A startcsúcsból a keresőgráfbeli csúcsokhoz a szülőre visszamutató pointerfüggvény által kijelölt út költségét.</li>
+        </ul>
+        <h3 id="7.-mikor-nevez%C3%BCnk-egy-ki%C3%A9rt%C3%A9kel%C5%91-f%C3%BCggv%C3%A9nyt-cs%C3%B6kken%C5%91nek%3F">7. Mikor nevezünk egy kiértékelő függvényt csökkenőnek?</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Ha egy csúcs függvényértéke soha nem nő, viszont mindig csökken valahányszor olcsóbb odavezető utat találunk hozzá.</em></li>
+          <li>Ha egy csúcs értéke csak akkor változik, de akkor csökken, ha egy olcsóbb odavezető utat találunk hozzá.</li>
+          <li>Ha egy startcsúcsból kiinduló már felfedezett út mentén a csúcsok függvényértékei monoton csökkennek.</li>
+          <li>Ha az algoritmus által kiterjesztett csúcsok függvényértékei monoton csökkennek.</li>
+        </ul>
+        <h3 id="8.-hogyan-lehet-a-keres%C5%91gr%C3%A1f-korrekts%C3%A9g%C3%A9t-fenn-tartani%3F-(2)">8. Hogyan lehet a keresőgráf korrektségét fenn tartani? (2)</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Minden kiterjesztés után bejárjuk a kiterjesztéssel elért gyerekcsúcsok leszármazottait (ha vannak), és kijavítjuk azok korrektségét.</em></li>
+          <li><strong>Y  </strong><em>Olyan kiértékelő függvényt használunk, amely kizárja, hogy egy már korábban kiterjesztett csúcshoz minden addiginál olcsóbb odavezető utat találjunk a startcsúcsból.</em></li>
+          <li>Visszahelyezzük az OPEN halmazba azt a zárt csúcsot, amelyhez minden addiginél olcsóbb odavezető utat találtunk a startcsúcsból.</li>
+          <li>Amikor egy minden addiginél olcsóbb odavezető utat találunk egy csúcshoz, akkor módosítjuk a szülőre visszamutató pointerfüggvény értékét és a költségfüggvény értékét.</li>
+        </ul>
+        <h3 id="9.-mikor-mondjuk-a-keres%C5%91gr%C3%A1f-egyik-cs%C3%BAcs%C3%A1ra%2C-hogy-korrekt%3F-(2)">9. Mikor mondjuk a keresőgráf egyik csúcsára, hogy korrekt? (2)</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Ha a szülőre visszamutató pointerek a keresőgráfra nézve optimális utat jelölnek ki hozzá a startcsúcsból, és ennek az útnak a költségét mutatja a költségfüggvény.</em></li>
+          <li><strong>Y  </strong><em>Ha optimális és konzisztens.</em></li>
+          <li>Ha a gráfkeresés már kiterjesztette a gyerekeit is.</li>
+          <li>Ha a költségfüggvény értéke a visszamutató pointerfüggvény által kijelölt szülő csúcsánál mért költségfüggvény értékének, és a szülőtől hozzávezető él költségének összege.</li>
+        </ul>
+        <h3 id="10.-mely-%C3%A1ll%C3%ADt%C3%A1sok-igazak-az-al%C3%A1bbiak-k%C3%B6z%C3%BCl-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-algoritmus%C3%A1ra%3F-(3)">10. Mely állítások igazak az alábbiak közül a gráfkeresés általános algoritmusára? (3)</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Véges 𝛿-gráfban mindig terminál.</em></li>
+          <li><strong>Y  </strong><em>Egy csúcsot legfeljebb véges sokszor terjeszt ki még végtelen nagy 𝛿-gráfok esetén is.</em></li>
+          <li><strong>Y  </strong><em>Véges 𝛿-gráfban talál megoldást, ha van.</em></li>
+          <li>Véges 𝛿-gráfban optimális megoldást talál, ha van megoldás.</li>
+        </ul>
+        <h3 id="11.-mely-%C3%A1ll%C3%ADt%C3%A1sok-nem-igazak-az-al%C3%A1bbiak-k%C3%B6z%C3%BCl-a-gr%C3%A1fkeres%C3%A9s-%C3%A1ltal%C3%A1nos-algoritmus%C3%A1ra%3F-(2)">11. Mely állítások NEM igazak az alábbiak közül a gráfkeresés általános algoritmusára? (2)</h3>
+        <ul>
+          <li><strong>Y  </strong><em>Körmentes 𝛿-gráfban talál megoldást, ha van.</em></li>
+          <li><strong>Y  </strong><em>𝛿-gráfban mindig terminál.</em></li>
+          <li>Csökkenő kiértékelő függvényt használva soha nem terjeszt ki inkorrekt csúcsot.</li>
+          <li>Véges 𝛿-gráfban talál megoldást, ha van.</li>
+        </ul>
+        <h3 id="12">12</h3>
+        <ul>
+          <li>globális munkaterület - keresőgráf</li>
+          <li>keresési szabály - kiterjesztés</li>
+          <li>pointerfüggvény - szülőcsúcs</li>
+          <li>csökkenő kiértékelő függvény - korrektség</li>
         </ul>
       </div>
     </div>
